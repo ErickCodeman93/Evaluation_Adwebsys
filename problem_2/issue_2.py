@@ -2,6 +2,12 @@ import os
 
 def init_ ():
 
+	if os.path.exists('result_error.txt'):
+		os.remove('result_error.txt')
+
+	if os.path.exists('result.txt'):
+		os.remove('result.txt')
+
 	if os.path.exists("demogamefile.txt"):
 		# Read file 
 		f = open( "demogamefile.txt", "r" )
@@ -54,15 +60,13 @@ def found_winner( round, markers_numbers, markers ):
 		
 
 		if firts_list[0] > two_list[0]:
-			print('El primer jugador Gana por la ventaja', firts_list[0] )
 			create_file( "result.txt", "%s %s"%( str( 1 ), str( firts_list[0] ) ) )
 
 		if two_list[0] > firts_list[0]:
-			print('El segundo jugador Gana por la ventaja', two_list[0] )
 			create_file( "result.txt", "%s %s"%( str( 2 ), str( two_list[0] ) ) )
 			
 	else:
-		print('No coinciden el numero de rondas con los marcadores en el archivo')
+		create_file( "result_error.txt", "No coinciden el numero de rondas con los marcadores en el archivo" )
 
 def create_file( name_file, message ):
 	if os.path.exists(name_file):

@@ -1,1 +1,1 @@
-Se necesita el archivo demogamefile.txt para iniciar el programa :<
+No coinciden el numero de rondas con los marcadores en el archivo

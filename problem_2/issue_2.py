@@ -1,5 +1,6 @@
 import os
 
+#Init File
 def init_ ():
 
 	if os.path.exists('result_error.txt'):
@@ -68,6 +69,7 @@ def found_winner( round, markers_numbers, markers ):
 	else:
 		create_file( "result_error.txt", "No coinciden el numero de rondas con los marcadores en el archivo" )
 
+#Create File
 def create_file( name_file, message ):
 	if os.path.exists(name_file):
 		os.remove(name_file)

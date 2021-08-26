@@ -6,20 +6,20 @@ console.log( string_encrypt );
 
 function test( value ){
 
-    let first_character = string_encrypt.charAt( parseInt(value) );
-    let second_character = string_encrypt.charAt( parseInt(value) +1 );
+	let first_character = string_encrypt.charAt( parseInt(value) );
+	let second_character = string_encrypt.charAt( parseInt(value) +1 );
 
-    if( value < string_encrypt.length ){
+	if( value < string_encrypt.length ){
 
-        if( first_character !== second_character ){
-            new_string_encrypt += first_character;
-            console.log(new_string_encrypt);
-        }
+		if( first_character !== second_character ){
+			new_string_encrypt += first_character;
+			console.log(new_string_encrypt);
+		}
 
-        return test( value + 1);
-    }
-    
-        return false;
+		return test( value + 1);
+	}
+	
+		return false;
 }
 
 test(0);

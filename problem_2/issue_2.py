@@ -18,7 +18,8 @@ def init_ ():
 
 		#Set markers
 		for x in f:
-			markers.append( x.split() )
+			if ( x.isspace() ) == False:
+				markers.append( x.split() )
 
 		# Close file
 		f.close()
@@ -34,6 +35,7 @@ def init_ ():
 		
 	else:
 		create_file( "result_error.txt", "Se necesita el archivo demogamefile.txt para iniciar el programa :<" )
+		print("Error: revisa el archivo 'result_error.txt'")
 
 #Found Winner
 def found_winner( round, markers_numbers, markers ):
@@ -48,9 +50,11 @@ def found_winner( round, markers_numbers, markers ):
 
 			if int( x[0] ) > int( x[1] ):
 				firts_list.append( ( int( x[0] ) - int( x[1] ) ) )
+				print( "Ganador de esta ronda: %s Jugador 1: %s Jugador 2: %s Ventaja: %s"%( "Jugador 1", x[0], x[1], ( int( x[0] ) - int( x[1] ) ) ) )
 
 			if int( x[0] ) < int( x[1] ) :
 				two_list.append( ( int( x[1] ) - int( x[0] ) ) )
+				print( "Ganador de esta ronda: %s Jugador 2: %s Jugador 2: %s Ventaja: %s"%( "Jugador 1", x[0], x[1], ( int( x[1] ) - int( x[0] ) ) ) )
 
 		# Alghorim sorted
 		firts_list.sort()
@@ -65,9 +69,12 @@ def found_winner( round, markers_numbers, markers ):
 
 		if two_list[0] > firts_list[0]:
 			create_file( "result.txt", "%s %s"%( str( 2 ), str( two_list[0] ) ) )
+
+		print("Éxito: revisa el archivo 'result.txt'")
 			
 	else:
 		create_file( "result_error.txt", "No coinciden el numero de rondas con los marcadores en el archivo" )
+		print("Error: revisa el archivo 'result_error.txt'")
 
 #Create File
 def create_file( name_file, message ):

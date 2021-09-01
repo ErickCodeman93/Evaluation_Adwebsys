@@ -29,7 +29,8 @@ class GameScore:
 				raise getopt.GetoptError('')
 
 		except getopt.GetoptError:
-			print('test.py -i <inputFile> -o <outputFile>')
+			print('issue_2.py -i <inputFile> -o <outputFile>')
+			print('issue_2.py --ifile <inputFile> --ofile <outputFile>')
 			sys.exit()
 
 	def getRounds(self):

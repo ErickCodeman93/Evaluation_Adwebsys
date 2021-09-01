@@ -86,7 +86,7 @@ class GameScore:
 			self.result_by_round = ( int( value_1 ) - int( value_2 ) )
 			self.winner_by_advantage = self.result_by_round
 			self.player = player
-			print( 'Jugador a la cabeza:', player, 'Ventaja:',self.winner_by_advantage , '\n')
+			print( 'Jugador a la cabeza:', self.player, 'Ventaja:',self.winner_by_advantage , '\n')
 
 		else:
 			self.result_by_round = ( int( value_1 ) - int( value_2 ) )

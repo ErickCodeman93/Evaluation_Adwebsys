@@ -45,14 +45,11 @@ class GameScore {
 
 		} //end try 
 		catch (e) {
-			console.error( e.message )
+			console.error( e.message );
+			process.exit();
 		} //end catch
 		 
 	} //end methond
-
-	setValues( line ){
-		this.markers.push(line);
-	} //end method
 
 	getRounds(){
 
@@ -78,6 +75,7 @@ class GameScore {
 		} //end try 
 		catch (e) {
 			console.error( e.message );
+			process.exit();
 		} //end catch
 	} //end method
 

@@ -37,7 +37,7 @@ class GameScore {
 	existFile() {
 
 		try {
-			if ( ! ( fs.existsSync( this.argv.i ) && fs.existsSync( this.argv.o ) ) )	
+			if ( ! ( fs.existsSync( this.argv.i ) ) )	
 				throw new Error('node issue_2 -i <inputFile> -o <outputFile> or node issue_2 --ifile <inputFile> --ofile <outputFile>');
 
 			this.inputFile = this.argv.i;

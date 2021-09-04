@@ -33,7 +33,7 @@ class decryptMessage {
 
 		try {
 
-			if ( ! ( fs.existsSync( this.argv.i ) && fs.existsSync( this.argv.o ) ) )
+			if ( ! ( fs.existsSync( this.argv.i ) ) )
 				throw new Error('1 node issue_1 -i <inputFile> -o <outputFile> or node issue_1 --ifile <inputFile> --ofile <outputFile>');
 
 			this.inputFile = this.argv.i;

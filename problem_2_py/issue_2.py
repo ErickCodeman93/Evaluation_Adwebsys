@@ -14,7 +14,6 @@ class GameScore:
 		self.player = 0
 		self.result_by_round = 0
 
-
 	def existFile( self ):
 		try :
 			opts, args = getopt.getopt( self.argv, "i:o:", [ "ifile=", "ofile="] )
@@ -25,7 +24,7 @@ class GameScore:
 				elif opt in ( "-o","--ofile"  ):
 					self.outputFile = arg
 
-			if not( os.path.exists( self.inputFile )  and  os.path.exists( self.outputFile ) ):
+			if not( os.path.exists( self.inputFile ) ):
 				raise getopt.GetoptError('')
 
 		except getopt.GetoptError:
